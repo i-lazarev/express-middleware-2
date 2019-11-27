@@ -41,7 +41,9 @@ Depending on his status or role he gets access to our admin area or not.
 * Add a GET route /admin
     * send an HTML message `<h1>Welcome to Admin page</h1>`
 
-* Add a middleware which checks for a field "username" on the request
-    * Check if the user has the role "admin"
-    => if not: redirect him to homepage "/" 
+* Add a middleware to the route /admin 
+    * It checks for a param "username" on the query string
+    * Check if the user with this name has the role "Admin"
+    * if username not given or user is not admin: 
+        * redirect him to homepage "/" 
 
